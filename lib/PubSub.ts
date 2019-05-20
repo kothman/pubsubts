@@ -17,7 +17,7 @@ export default class PubSub {
     private ref: number = 0
 
     /**
-     * on
+     * Register handler for given key, returning reference
      */
     public on(key: string, handler: Function): number {
         let ref: number = this.getRefAndIncrement()
@@ -31,7 +31,7 @@ export default class PubSub {
     }
 
     /**
-     * off
+     * Removes reference for given key, or removes all references if ref not provided
      */
     public off(key: string, ref?: number) {
         if (ref === null || ref === undefined) {
@@ -46,9 +46,9 @@ export default class PubSub {
     }
 
     /**
-     * once
+     * Registers handler to be called only once, returning ref
      */
-    public once(key: string, handler: Function) {
+    public once(key: string, handler: Function): number {
         let ref: number = this.getRefAndIncrement()
         if (!this.handlers[key])
             this.handlers[key] = {}
@@ -60,7 +60,7 @@ export default class PubSub {
     }
 
     /**
-     * emit
+     * Calls all handlers for given key, passing data if provided
      */
     public emit(key: string, data: any) {
         this.validateKey(key)
@@ -75,7 +75,7 @@ export default class PubSub {
     }
 
     /**
-     * reset to default state
+     * Reset to default state
      */
     public reset() {
         this.ref = 0;

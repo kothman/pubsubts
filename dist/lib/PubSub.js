@@ -9,7 +9,7 @@ var PubSub = /** @class */ (function () {
         this.ref = 0;
     }
     /**
-     * on
+     * Register handler for given key, returning reference
      */
     PubSub.prototype.on = function (key, handler) {
         var ref = this.getRefAndIncrement();
@@ -22,7 +22,7 @@ var PubSub = /** @class */ (function () {
         return ref;
     };
     /**
-     * off
+     * Removes reference for given key, or removes all references if ref not provided
      */
     PubSub.prototype.off = function (key, ref) {
         if (ref === null || ref === undefined) {
@@ -37,7 +37,7 @@ var PubSub = /** @class */ (function () {
         }
     };
     /**
-     * once
+     * Registers handler to be called only once, returning ref
      */
     PubSub.prototype.once = function (key, handler) {
         var ref = this.getRefAndIncrement();
@@ -50,7 +50,7 @@ var PubSub = /** @class */ (function () {
         return ref;
     };
     /**
-     * emit
+     * Calls all handlers for given key, passing data if provided
      */
     PubSub.prototype.emit = function (key, data) {
         var _this = this;
@@ -65,7 +65,7 @@ var PubSub = /** @class */ (function () {
         });
     };
     /**
-     * reset to default state
+     * Reset to default state
      */
     PubSub.prototype.reset = function () {
         this.ref = 0;
