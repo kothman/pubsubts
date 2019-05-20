@@ -7,7 +7,7 @@ Fork repository, install dependencies (i.e. `yarn install`).
 Build via `yarn build`, run tests (make sure to build first) via `yarn test`
 
 ## Reference
-Install via `yarn add pubsubts` or `npm install pubsubts`.
+Install via `yarn add @kothman/pubsubts` or `npm install @kothman/pubsubts`.
 
 In your code:
 ```
