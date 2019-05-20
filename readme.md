@@ -3,10 +3,9 @@
 PubSub system written in TypeScript.
 
 ## Reference
-```
-yarn add pubsubts
-```
+Install via `yarn add pubsubts` or `npm install pubsubts`.
 
+In your code:
 ```
 import PubSub from 'pubsubts'
 // also valid, but without TypeScript typings
