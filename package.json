@@ -1,6 +1,6 @@
 {
   "name": "@kothman/pubsubts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "PubSub module written in TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
