@@ -2,6 +2,10 @@
 
 PubSub system written in TypeScript.
 
+## Contributing
+Fork repository, install dependencies (i.e. `yarn install`).
+Build via `yarn build`, run tests (make sure to build first) via `yarn test`
+
 ## Reference
 Install via `yarn add pubsubts` or `npm install pubsubts`.
 
