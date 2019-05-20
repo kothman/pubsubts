@@ -1,0 +1,20 @@
+{
+  "name": "pubsubts",
+  "version": "1.0.0",
+  "description": "PubSub module written in TypeScript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/kothman/pubsubts",
+  "author": "Adrian Kothman <abkothman@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.0.2",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "typescript": "^3.4.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha tests.js"
+  }
+}
