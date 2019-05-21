@@ -20,7 +20,7 @@ const PubSub = require('pubsubts')
 returns reference number, used for PubSub.off
 
 ### PubSub.once(eventName: string, handler: Function): number
-Same as PubSub.once, except ref is removed (via PubSub.off(eventName, ref)) after being called
+Same as PubSub.on, except ref is removed (via PubSub.off(eventName, ref)) after being called
 
 ### PubSub.off(eventName: string, ref?: number)
 Removes specific handler. If ref not provided, removes all handlers for eventName.
